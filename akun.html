@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akun Saya — Puding Lembut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="emoji">🍮</span> Puding Lembut</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="login.html" id="loginNavLink" class="nav-cta">Masuk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= ISI AKUN ================= -->
+  <div class="form-page">
+    <div class="form-card" style="text-align:center;">
+      <div class="form-emoji">🎉</div>
+      <h2 id="welcomeText">Halo!</h2>
+      <p class="form-desc">Senang melihatmu lagi. Pesananmu akan muncul di sini.</p>
+
+      <button class="btn-submit" style="background-color: var(--strawberry-dark); box-shadow:0 5px 0 var(--strawberry-dark); margin-top:10px;" onclick="handleLogout()">
+        Keluar
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <h4>🍮 Vawadis Puting</h4>
+        <p>Toko puding rumahan dengan resep keluarga, melayani pesanan harian dan acara spesial sejak 2021.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Akun</h4>
+        <ul>
+          <li><a href="login.html">Masuk</a></li>
+          <li><a href="register.html">Daftar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Puding Lembut. Semua hak cipta dilindungi.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // Halaman ini hanya untuk pengguna yang sudah login
+    const namaUser = requireLogin();
+    if (namaUser) {
+      document.getElementById('welcomeText').textContent = 'Halo, ' + namaUser + '! 👋';
+    }
+  </script>
+</body>
+</html>

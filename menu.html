@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Puding Lembut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="emoji">🍮</span> Varadis Puding</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="login.html" id="loginNavLink" class="nav-cta">Masuk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <div class="page-header">
+    <h1>Menu Puding Kami 🍮</h1>
+    <p>Semua puding dibuat fresh harian. Pesan minimal 1 hari sebelumnya untuk jumlah besar.</p>
+  </div>
+
+  <!-- ================= MENU GRID LENGKAP ================= -->
+  <section class="section">
+    <h2 class="section-title">Puding Klasik</h2>
+    <div class="menu-grid">
+      <div class="product-card">
+        <div class="product-img"><img src="images/karamel.jpg" alt="Puding Karamel Klasik"></div>
+        <div class="product-body">
+          <h3>Puding Karamel Klasik</h3>
+          <p>Lembut, manis pas, dengan saus karamel buatan sendiri.</p>
+          <div class="product-footer">
+            <span class="price">Rp 20.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Karamel Klasik')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/susuvanila.jpg" alt="Puding Susu Vanilla"></div>
+        <div class="product-body">
+          <h3>Puding Susu Vanilla</h3>
+          <p>Klasik dan creamy, favorit segala usia.</p>
+          <div class="product-footer">
+            <span class="price">Rp 20.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Susu Vanilla')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/coffe.jpg" alt="Puding Kopi Susu"></div>
+        <div class="product-body">
+          <h3>Puding Kopi Susu</h3>
+          <p>Untuk pencinta kopi, manis dengan sentuhan pahit ringan.</p>
+          <div class="product-footer">
+            <span class="price">Rp 20.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Kopi Susu')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: var(--krim-2); border-radius: 40px;">
+    <h2 class="section-title">Puding Buah Segar</h2>
+    <div class="menu-grid">
+      <div class="product-card">
+        <div class="product-img"><img src="images/stroberi.jpg" alt="Puding Strawberry"></div>
+        <div class="product-body">
+          <h3>Puding Strawberry</h3>
+          <p>Puding susu dengan saus strawberry asli, segar dan creamy.</p>
+          <div class="product-footer">
+            <span class="price">Rp 17.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Strawberry')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/mangga.jpg" alt="Puding Mangga Susu"></div>
+        <div class="product-body">
+          <h3>Puding Mangga Susu</h3>
+          <p>Manis alami mangga matang dipadu lapisan susu lembut.</p>
+          <div class="product-footer">
+            <span class="price">Rp 16.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Mangga Susu')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/blueberry.jpg" alt="Puding Blueberry Cheese"></div>
+        <div class="product-body">
+          <h3>Puding Chea Seed Blueberry</h3>
+          <p>Perpaduan cheese cream dan saus blueberry asam manis.</p>
+          <div class="product-footer">
+            <span class="price">Rp 19.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Blueberry Cheese')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Puding Premium</h2>
+    <div class="menu-grid">
+      <div class="product-card">
+        <div class="product-img"><img src="images/coklat.jpg" alt="Puding Coklat Belgia"></div>
+        <div class="product-body">
+          <h3>Puding Coklat Belgia</h3>
+          <p>Rasa coklat pekat untuk pencinta dark chocolate sejati.</p>
+          <div class="product-footer">
+            <span class="price">Rp 65.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Coklat Belgia')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/tiramisu.jpg" alt="Puding Tiramisu"></div>
+        <div class="product-body">
+          <h3>Puding Tiramisu</h3>
+          <p>Lapisan kopi, mascarpone, dan cokelat bubuk premium.</p>
+          <div class="product-footer">
+            <span class="price">Rp 35.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Tiramisu')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/birthday.jpg" alt="Puding Custom Ulang Tahun"></div>
+        <div class="product-body">
+          <h3>Puding Custom Ulang Tahun</h3>
+          <p>Puding dalam loyang besar dengan dekorasi sesuai pesanan.</p>
+          <div class="product-footer">
+            <span class="price">Mulai Rp 125.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Custom Ulang Tahun')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <h4>🍮 Puding Lembut</h4>
+        <p>Toko puding rumahan dengan resep keluarga, melayani pesanan harian dan acara spesial sejak 2021.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Akun</h4>
+        <ul>
+          <li><a href="login.html">Masuk</a></li>
+          <li><a href="register.html">Daftar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Puding Lembut. Semua hak cipta dilindungi.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puding Lembut — Toko Puding Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="emoji">🍮</span> Varadis Puding</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="login.html" id="loginNavLink" class="nav-cta">Masuk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">🍃 Dibuat segar setiap hari</p>
+      <h1>Puding lembut yang <span class="highlight">bikin senyum</span> setiap suapan</h1>
+      <p class="lead">Dari toples mungil sampai pesanan ulang tahun, semua puding kami dibuat dari susu segar dan buah asli — tanpa pengawet, penuh rasa.</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-primary">Lihat Menu </a>
+        <a href="tentang.html" class="btn btn-secondary">Kenali Kami</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="pudding-jar" style="font-size:10rem; text-align:center;">🍮</div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUK UNGGULAN ================= -->
+  <section class="section">
+    <h2 class="section-title">Favorit Pelanggan</h2>
+    <p class="section-subtitle">Empat rasa paling sering dipesan minggu ini. Klik "Lihat Semua" untuk menu lengkap kami.</p>
+
+    <div class="menu-grid">
+      <div class="product-card">
+        <div class="product-img"><img src="images/karamel.jpg" alt="Puding Karamel Klasik"></div>
+        <div class="product-body">
+          <h3>Puding Karamel Klasik</h3>
+          <p>Lembut, manis pas, dengan saus karamel buatan sendiri.</p>
+          <div class="product-footer">
+            <span class="price">Rp 15.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Karamel Klasik')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/stroberi.jpg" alt="Puding Strawberry"></div>
+        <div class="product-body">
+          <h3>Puding Strawberry</h3>
+          <p>Puding susu dengan saus strawberry asli, segar dan creamy.</p>
+          <div class="product-footer">
+            <span class="price">Rp 17.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Strawberry')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/coklat.jpg" alt="Puding Coklat Belgia"></div>
+        <div class="product-body">
+          <h3>Puding Coklat Belgia</h3>
+          <p>Rasa coklat pekat untuk pencinta dark chocolate sejati.</p>
+          <div class="product-footer">
+            <span class="price">Rp 18.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Coklat Belgia')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="images/mangga.jpg" alt="Puding Mangga Susu"></div>
+        <div class="product-body">
+          <h3>Puding Mangga Susu</h3>
+          <p>Manis alami mangga matang dipadu lapisan susu lembut.</p>
+          <div class="product-footer">
+            <span class="price">Rp 16.000</span>
+            <button class="btn-add" onclick="tambahPesanan('Puding Mangga Susu')">+ Pesan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:36px;">
+      <a href="menu.html" class="btn btn-secondary">Lihat Semua Menu →</a>
+    </div>
+  </section>
+
+  <!-- ================= TENTANG SINGKAT ================= -->
+  <section class="section" style="background-color: var(--krim-2); border-radius: 40px;">
+    <div class="about-wrap">
+      <div class="about-emoji-box">🧁</div>
+      <div>
+        <h2 class="section-title" style="text-align:left;">Kenapa Pilih Puding Lembut?</h2>
+        <ul class="about-list">
+          <li><span class="tick">✓</span> Dibuat fresh setiap pagi, tanpa pengawet.</li>
+          <li><span class="tick">✓</span> Bahan susu dan buah asli pilihan.</li>
+          <li><span class="tick">✓</span> Kemasan rapi, aman untuk dikirim ke luar kota.</li>
+          <li><span class="tick">✓</span> Bisa custom rasa untuk acara & ulang tahun.</li>
+        </ul>
+        <div style="margin-top:24px;">
+          <a href="tentang.html" class="btn btn-primary">Selengkapnya Tentang Kami</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <h4>🍮 Puding Lembut</h4>
+        <p>Toko puding rumahan dengan resep keluarga, melayani pesanan harian dan acara spesial sejak 2021.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Akun</h4>
+        <ul>
+          <li><a href="login.html">Masuk</a></li>
+          <li><a href="register.html">Daftar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Puding Lembut. Semua hak cipta dilindungi.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

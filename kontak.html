@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak — Puding Lembut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="emoji">🍮</span> Puding Lembut</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="login.html" id="loginNavLink" class="nav-cta">Masuk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <div class="page-header">
+    <h1>Hubungi Kami 📞</h1>
+    <p>Ada pertanyaan atau pesanan khusus? Kirimkan pesan, kami balas secepatnya.</p>
+  </div>
+
+  <!-- ================= KONTAK ================= -->
+  <section class="section">
+    <div class="contact-wrap">
+
+      <!-- Info kontak -->
+      <div class="contact-info-card">
+        <h3>Informasi Kontak</h3>
+
+        <div class="contact-info-item">
+          <span class="ic">📍</span>
+          <div>
+            <h4>Alamat</h4>
+            <p>Jl. Manis Sebrang Jembatan Cinta</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="ic">📱</span>
+          <div>
+            <h4>WhatsApp</h4>
+            <p>087709856058</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="ic">✉️</span>
+          <div>
+            <h4>Email</h4>
+            <p>nunivaradis@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="ic">🕒</span>
+          <div>
+            <h4>Jam Operasional</h4>
+            <p>Senin – Sabtu, 08.00 – 18.00 WIB</p>
+          </div>
+        </div>
+
+        <div class="social-row">
+          
+        </div>
+      </div>
+
+      <!-- Form kontak -->
+      <div class="form-card" style="width:auto;">
+        <h2 style="text-align:left;">Kirim Pesan</h2>
+        <p class="form-desc" style="text-align:left;">Isi form di bawah, kami akan menghubungi balik secepatnya.</p>
+
+        <div class="alert-banner" id="contactSuccess">Pesan terkirim! Terima kasih sudah menghubungi kami. 🍮</div>
+
+        <form id="contactForm" onsubmit="handleContactForm(event)">
+          <div class="form-group">
+            <label for="contactNama">Nama</label>
+            <input type="text" id="contactNama" placeholder="Nama kamu" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" placeholder="nama@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactPesan">Pesan</label>
+            <textarea id="contactPesan" placeholder="Tulis pesan atau pertanyaanmu..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Kirim Pesan</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <h4>🍮 Puding Lembut</h4>
+        <p>Toko puding rumahan dengan resep keluarga, melayani pesanan harian dan acara spesial sejak 2021.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Akun</h4>
+        <ul>
+          <li><a href="login.html">Masuk</a></li>
+          <li><a href="register.html">Daftar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Puding Lembut. Semua hak cipta dilindungi.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleContactForm(event) {
+      event.preventDefault();
+      document.getElementById('contactSuccess').style.display = 'block';
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+</body>
+</html>
