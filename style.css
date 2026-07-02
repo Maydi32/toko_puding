@@ -1,0 +1,752 @@
+/* =========================================
+   PUDING LEMBUT — Design Tokens
+   Warna   : Krim vanila #FFF6EA, Karamel #C97B3D,
+             Strawberry #F4A6A0, Coklat tua #5C3A28,
+             Hijau daun mint #7FB99A (aksen segar)
+   Font    : 'Fredoka' (display, bulat & ramah)
+             'Nunito' (body, mudah dibaca)
+   Signature: efek "jiggle" pada kartu produk saat di-hover,
+              meniru tekstur puding yang bergetar lembut
+   ========================================= */
+
+:root {
+  --krim: #FFF6EA;
+  --krim-2: #FFEFD9;
+  --karamel: #C97B3D;
+  --karamel-dark: #A8602A;
+  --strawberry: #F4A6A0;
+  --strawberry-dark: #E2807A;
+  --coklat: #5C3A28;
+  --mint: #7FB99A;
+  --putih: #FFFFFF;
+  --bayangan: rgba(92, 58, 40, 0.15);
+
+  --font-display: 'Fredoka', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--krim);
+  color: var(--coklat);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--mint);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--krim);
+  border-bottom: 3px solid var(--karamel);
+  box-shadow: 0 2px 12px var(--bayangan);
+}
+
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--karamel-dark);
+}
+
+.nav-logo span.emoji {
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-menu li a {
+  display: inline-block;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: var(--karamel);
+  color: var(--putih);
+  transform: translateY(-2px);
+}
+
+.nav-cta {
+  background-color: var(--strawberry) !important;
+  color: var(--putih) !important;
+}
+
+.nav-cta:hover {
+  background-color: var(--strawberry-dark) !important;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 6px;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 3px;
+  background-color: var(--karamel-dark);
+  border-radius: 2px;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 24px 50px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-display);
+  color: var(--mint);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: var(--coklat);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero h1 .highlight {
+  color: var(--karamel-dark);
+  position: relative;
+}
+
+.hero p.lead {
+  font-size: 1.1rem;
+  max-width: 480px;
+  margin-bottom: 28px;
+  color: #6b4d3a;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 30px;
+  border-radius: 50px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--karamel);
+  color: var(--putih);
+  box-shadow: 0 6px 0 var(--karamel-dark);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 var(--karamel-dark);
+}
+
+.btn-secondary {
+  background-color: var(--putih);
+  color: var(--karamel-dark);
+  border: 2px solid var(--karamel);
+}
+
+.btn-secondary:hover {
+  background-color: var(--krim-2);
+  transform: translateY(-3px);
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.pudding-jar {
+  width: 260px;
+  animation: floatY 4s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* =========================================
+   SECTION UMUM
+   ========================================= */
+.section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--coklat);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #8a6b54;
+  max-width: 560px;
+  margin: 0 auto 40px;
+}
+
+/* =========================================
+   PRODUK / MENU — signature jiggle effect
+   ========================================= */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.product-card {
+  background-color: var(--putih);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 0 var(--bayangan);
+  transition: transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  animation: jiggle 0.5s ease;
+}
+
+@keyframes jiggle {
+  0%   { transform: scale(1) rotate(0); }
+  25%  { transform: scale(1.03) rotate(-1.5deg); }
+  50%  { transform: scale(1.05) rotate(1.5deg); }
+  75%  { transform: scale(1.03) rotate(-1deg); }
+  100% { transform: scale(1.02) rotate(0); }
+}
+
+.product-img {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  background: linear-gradient(160deg, var(--krim-2), var(--krim));
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: var(--karamel-dark);
+}
+
+.product-body p {
+  font-size: 0.92rem;
+  color: #7a5c47;
+  flex-grow: 1;
+  margin-bottom: 14px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--strawberry-dark);
+  font-size: 1.05rem;
+}
+
+.btn-add {
+  background-color: var(--mint);
+  color: var(--putih);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.btn-add:hover {
+  background-color: #6aa884;
+}
+
+/* =========================================
+   TENTANG KAMI
+   ========================================= */
+.about-wrap {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-emoji-box {
+  background-color: var(--krim-2);
+  border-radius: var(--radius-lg);
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+}
+
+.about-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: #6b4d3a;
+}
+
+.about-list li .tick {
+  color: var(--mint);
+  font-weight: 900;
+}
+
+/* =========================================
+   FORM (Login / Register / Kontak)
+   ========================================= */
+.form-page {
+  min-height: calc(100vh - 280px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.form-card {
+  background-color: var(--putih);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 0 var(--bayangan);
+  padding: 40px 36px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.form-emoji {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 6px;
+}
+
+.form-card h2 {
+  font-family: var(--font-display);
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--karamel-dark);
+  margin-bottom: 6px;
+}
+
+.form-card p.form-desc {
+  text-align: center;
+  color: #8a6b54;
+  font-size: 0.92rem;
+  margin-bottom: 26px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--coklat);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #EFE0CC;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  background-color: var(--krim);
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--karamel);
+  outline: none;
+}
+
+.form-error {
+  color: var(--strawberry-dark);
+  font-size: 0.82rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 22px;
+}
+
+.form-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #6b4d3a;
+}
+
+.form-options a {
+  color: var(--karamel-dark);
+  font-weight: 700;
+}
+
+.form-options a:hover {
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--karamel);
+  color: var(--putih);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  padding: 13px;
+  border-radius: 50px;
+  box-shadow: 0 5px 0 var(--karamel-dark);
+  transition: transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+}
+
+.form-footer-link {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 0.9rem;
+  color: #6b4d3a;
+}
+
+.form-footer-link a {
+  color: var(--karamel-dark);
+  font-weight: 700;
+}
+
+.alert-banner {
+  display: none;
+  background-color: #E9F5EE;
+  border: 2px solid var(--mint);
+  color: #356b4d;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* =========================================
+   KONTAK
+   ========================================= */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info-card {
+  background-color: var(--krim-2);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+}
+
+.contact-info-card h3 {
+  font-family: var(--font-display);
+  color: var(--karamel-dark);
+  margin-bottom: 18px;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+
+.contact-info-item .ic {
+  font-size: 1.4rem;
+}
+
+.contact-info-item h4 {
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.contact-info-item p {
+  font-size: 0.88rem;
+  color: #7a5c47;
+}
+
+.social-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-row a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--karamel);
+  color: var(--putih);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-row a:hover {
+  background-color: var(--karamel-dark);
+  transform: translateY(-3px);
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #EFE0CC;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  background-color: var(--krim);
+  resize: vertical;
+  min-height: 110px;
+}
+
+textarea:focus {
+  border-color: var(--karamel);
+  outline: none;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+  background-color: var(--coklat);
+  color: var(--krim-2);
+  padding: 50px 24px 24px;
+  margin-top: 40px;
+}
+
+.footer-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 30px;
+}
+
+.footer-wrap h4 {
+  font-family: var(--font-display);
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+  color: var(--strawberry);
+}
+
+.footer-wrap p {
+  font-size: 0.88rem;
+  color: #d8c4b3;
+  max-width: 320px;
+}
+
+.footer-wrap ul li {
+  margin-bottom: 8px;
+}
+
+.footer-wrap ul li a {
+  font-size: 0.88rem;
+  color: #d8c4b3;
+  transition: color 0.2s ease;
+}
+
+.footer-wrap ul li a:hover {
+  color: var(--strawberry);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #b09a87;
+  border-top: 1px solid #6b4d3a;
+  padding-top: 18px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   PAGE HEADER (untuk halaman selain home)
+   ========================================= */
+.page-header {
+  background-color: var(--krim-2);
+  text-align: center;
+  padding: 50px 24px;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--karamel-dark);
+}
+
+.page-header p {
+  color: #8a6b54;
+  margin-top: 8px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .hero p.lead { margin: 0 auto 28px; }
+  .hero-actions { justify-content: center; }
+  .about-wrap { grid-template-columns: 1fr; }
+  .about-emoji-box { height: 200px; font-size: 4.5rem; }
+  .contact-wrap { grid-template-columns: 1fr; }
+  .footer-wrap { grid-template-columns: 1fr; text-align: center; }
+  .footer-wrap p { margin: 0 auto; }
+  .contact-info-item { justify-content: center; }
+}
+
+@media (max-width: 720px) {
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--krim);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px 20px;
+    box-shadow: 0 8px 12px var(--bayangan);
+    display: none;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  .nav-menu li a {
+    display: block;
+    text-align: center;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+}
